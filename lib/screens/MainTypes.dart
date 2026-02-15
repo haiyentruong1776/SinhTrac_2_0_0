@@ -21,32 +21,18 @@ class MainTypesState extends State<MainTypes> with SingleTickerProviderStateMixi
                 "Các chủng chính",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  color: AppColors.accent,
-                  decoration: TextDecoration.underline,
-                  decorationColor: AppColors.greenAccent,
-                  decorationStyle: TextDecorationStyle.solid,
-                  shadows: [
-                    Shadow(
-                      color: AppColors.black,
-                      blurRadius: 10.0,
-                      offset: Offset(5.0, 5.0),
-                    ),
-                  ],
+                  color: AppColors.textPrimary,
                 ),
               ),
-              iconTheme: new IconThemeData(color: AppColors.accent),
-              backgroundColor: AppColors.black87,
+              iconTheme: new IconThemeData(color: AppColors.textPrimary),
+              backgroundColor: AppColors.appBarBg,
               actions: <Widget>[
                 // action button
                 IconButton(
                   icon: Image.asset('images/home_icon.png'),
                   onPressed: () {
-                    // Navigator.popUntil(context, ModalRoute.withName('/home'));
-
                     Navigator.of(context)
                         .pushNamedAndRemoveUntil('/home', ModalRoute.withName('/intro'));
-                    // Navigator.pop(context);
-                    // Navigator.pop(context, "/");
                   },
                 )
               ]),
@@ -88,7 +74,7 @@ class MainTypesState extends State<MainTypes> with SingleTickerProviderStateMixi
                                       style: TextStyle(
                                           fontSize: 25,
                                           fontWeight: FontWeight.bold,
-                                          color: AppColors.titleHighlight),
+                                          color: AppColors.textPrimary),
                                     ),
                                   ],
                                 )),
@@ -111,7 +97,7 @@ class MainTypesState extends State<MainTypes> with SingleTickerProviderStateMixi
                                       style: TextStyle(
                                           fontSize: 25,
                                           fontWeight: FontWeight.bold,
-                                          color: AppColors.blueAccent),
+                                          color: AppColors.textPrimary),
                                     ),
                                   ],
                                 )),
@@ -134,7 +120,7 @@ class MainTypesState extends State<MainTypes> with SingleTickerProviderStateMixi
                                     style: TextStyle(
                                         fontSize: 25,
                                         fontWeight: FontWeight.bold,
-                                        color: AppColors.lightGreen),
+                                        color: AppColors.textPrimary),
                                   ),
                                 ],
                               ),

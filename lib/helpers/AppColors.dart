@@ -1,43 +1,42 @@
 import 'package:flutter/material.dart';
 
 /// Centralized color constants used throughout the app.
-/// Replace hardcoded Colors.* references with AppColors.* for consistency.
+/// Light theme palette — minimal colors, hierarchy via weight & size.
 class AppColors {
   AppColors._(); // Prevent instantiation
 
-  // ─── Primary / Neutral ───────────────────────────────────────────
+  // ─── Core Palette ─────────────────────────────────────────────────
   static const Color white = Colors.white;
   static const Color black = Colors.black;
-  static const Color black87 = Colors.black87;
-  static const Color black12 = Colors.black12;
-  static const Color white12 = Colors.white12;
-  static const Color darkGrey = Color.fromRGBO(50, 50, 50, 1);
 
-  // ─── Accent / Highlight ──────────────────────────────────────────
-  static const Color accent = Colors.yellowAccent;
-  static const Color yellow = Colors.yellow;
-  static final Color yellowShade50 = Colors.yellow.shade50;
-  static final Color yellow100 = Colors.yellow[100]!;
-  static const Color limeAccent = Colors.limeAccent;
-  static const Color orange = Colors.orange;
+  // ─── Text ─────────────────────────────────────────────────────────
+  static const Color textPrimary = Color(0xFF212121); // dark grey body text
+  static const Color textSecondary = Color(0xFF757575); // lighter secondary text
 
-  // ─── Title / Header ──────────────────────────────────────────────
-  static const Color titleHighlight = Colors.redAccent;
-  static const Color headerGreen = Colors.lightGreenAccent;
-  static const Color headerBlue = Colors.lightBlueAccent;
+  // ─── App Bar ──────────────────────────────────────────────────────
+  static const Color appBarBg = Color(0xFFFAFAFA); // soft white
 
-  // ─── Error / Action ──────────────────────────────────────────────
+  // ─── Backgrounds ──────────────────────────────────────────────────
+  static const Color scaffoldBg = Colors.white;
+  static const Color cardBg = Color(0xFFF5F5F5); // light grey card
+  static const Color menuBoxBg = Colors.white; // menu items on Home
+
+  // ─── Accent (SplashScreen shimmer only) ───────────────────────────
+  static const Color accent = Color(0xFF3F51B5); // indigo
+
+  // ─── Error / Action ───────────────────────────────────────────────
   static const Color error = Colors.red;
   static const Color dialogAction = Colors.blue;
-  static const Color blueAccent = Colors.blueAccent;
 
-  // ─── Green Variants ──────────────────────────────────────────────
-  static const Color green = Colors.green;
-  static const Color greenAccent = Colors.greenAccent;
-  static const Color lightGreen = Colors.lightGreen;
+  // ─── Button Colors ────────────────────────────────────────────────
+  static const Color orange = Colors.orange;
+  static const Color green = Color(0xFF4CAF50); // material green
 
-  // ─── Backgrounds (fromRGBO) ──────────────────────────────────────
+  // ─── Card Backgrounds for MainTypes ───────────────────────────────
   static const Color lightYellowGreen = Color.fromRGBO(247, 255, 230, 1);
   static const Color lightGreenBg = Color.fromRGBO(230, 255, 230, 1);
   static const Color lightBlueBg = Color.fromRGBO(230, 242, 255, 1);
+
+  // ─── Divider ──────────────────────────────────────────────────────
+  static const Color divider = Color(0xFFE0E0E0);
 }

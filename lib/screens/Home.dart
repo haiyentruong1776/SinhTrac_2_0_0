@@ -31,42 +31,29 @@ class HomeState extends State<Home> with SingleTickerProviderStateMixin {
         child: SafeArea(
           child: Scaffold(
               appBar: AppBar(
-                title: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Image.asset(
-                        'images/icon_title.png',
-                        height: 25,
-                      ),
-                      FittedBox(
-                          fit: BoxFit.fitWidth,
-                          child: Text(
-                            "Cẩm Nang Sinh Trắc",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: AppColors.accent,
-                              decoration: TextDecoration.underline,
-                              decorationColor: AppColors.white,
-                              decorationStyle: TextDecorationStyle.solid,
-                              shadows: [
-                                Shadow(
-                                  color: AppColors.black,
-                                  blurRadius: 10.0,
-                                  offset: Offset(5.0, 5.0),
-                                ),
-                              ],
-                            ),
-                          )),
-                      GestureDetector(
-                        child: Image.asset('images/star.png',
-                            height: 30, width: 30),
-                        onTap: () {
-                          InAppReview.instance.openStoreListing();
-                        },
-                      )
-                    ]),
-                iconTheme: new IconThemeData(color: AppColors.accent),
-                backgroundColor: AppColors.black87,
+                title: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: <Widget>[
+                  Image.asset(
+                    'images/icon_title.png',
+                    height: 25,
+                  ),
+                  FittedBox(
+                      fit: BoxFit.fitWidth,
+                      child: Text(
+                        "Cẩm Nang Sinh Trắc",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: AppColors.textPrimary,
+                        ),
+                      )),
+                  GestureDetector(
+                    child: Image.asset('images/star.png', height: 30, width: 30),
+                    onTap: () {
+                      InAppReview.instance.openStoreListing();
+                    },
+                  )
+                ]),
+                iconTheme: new IconThemeData(color: AppColors.textPrimary),
+                backgroundColor: AppColors.appBarBg,
               ),
               body: BodyWidget()),
         ));
@@ -106,8 +93,7 @@ class BodyWidget extends StatelessWidget {
                   ),
                   child: new ClipRRect(
                     borderRadius: new BorderRadius.circular(30.0),
-                    child: Image.asset('images/logo.png',
-                        height: deviceHeight / 8),
+                    child: Image.asset('images/logo.png', height: deviceHeight / 8),
                   ),
                 ),
                 Expanded(
@@ -118,14 +104,13 @@ class BodyWidget extends StatelessWidget {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
-                                  Image.asset('images/info.png',
-                                      height: 30, width: 30),
+                                  Image.asset('images/info.png', height: 30, width: 30),
                                   Text(
                                     " Giới Thiệu ",
                                     style: TextStyle(
                                       fontSize: 25,
                                       fontWeight: FontWeight.bold,
-                                      color: AppColors.white,
+                                      color: AppColors.textPrimary,
                                     ),
                                   ),
                                 ],
@@ -137,10 +122,8 @@ class BodyWidget extends StatelessWidget {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
                                   ClipRRect(
-                                    borderRadius: new BorderRadius.all(
-                                        Radius.circular(20.0)),
-                                    child: Image.asset('images/logo.png',
-                                        height: 30, width: 30),
+                                    borderRadius: new BorderRadius.all(Radius.circular(20.0)),
+                                    child: Image.asset('images/logo.png', height: 30, width: 30),
                                   ),
                                   Container(
                                     width: deviceWidth - 120,
@@ -150,10 +133,7 @@ class BodyWidget extends StatelessWidget {
                                         " Tra Cứu Sinh Trắc ",
                                         style: TextStyle(
                                           fontWeight: FontWeight.bold,
-                                          color: AppColors.accent,
-                                          decorationColor: AppColors.limeAccent,
-                                          decorationStyle:
-                                              TextDecorationStyle.solid,
+                                          color: AppColors.textPrimary,
                                         ),
                                       ),
                                     ),
@@ -166,14 +146,13 @@ class BodyWidget extends StatelessWidget {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
-                                  Image.asset('images/history.png',
-                                      height: 30, width: 30),
+                                  Image.asset('images/history.png', height: 30, width: 30),
                                   Text(
                                     " Lịch Sử ",
                                     style: TextStyle(
                                         fontSize: 25,
                                         fontWeight: FontWeight.bold,
-                                        color: AppColors.white),
+                                        color: AppColors.textPrimary),
                                   ),
                                 ],
                               ),
@@ -184,22 +163,20 @@ class BodyWidget extends StatelessWidget {
                               InAppReview.instance.openStoreListing();
                             },
                             child: Container(
-                                padding: EdgeInsets.only(
-                                    left: 10, top: 10, bottom: 10),
+                                padding: EdgeInsets.only(left: 10, top: 10, bottom: 10),
                                 margin: EdgeInsets.only(bottom: 16),
                                 alignment: Alignment.center,
                                 decoration: CommonFunctions.boxDecoration(),
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: <Widget>[
-                                    Image.asset('images/star.png',
-                                        height: 30, width: 30),
+                                    Image.asset('images/star.png', height: 30, width: 30),
                                     Text(
                                       " Rate 5 Sao ",
                                       style: TextStyle(
                                           fontSize: 25,
                                           fontWeight: FontWeight.bold,
-                                          color: AppColors.white),
+                                          color: AppColors.textPrimary),
                                     ),
                                   ],
                                 )),
@@ -209,16 +186,14 @@ class BodyWidget extends StatelessWidget {
                               CommonFunctions.onWillPop(context);
                             },
                             child: Container(
-                                padding: EdgeInsets.only(
-                                    left: 10, top: 10, bottom: 10),
+                                padding: EdgeInsets.only(left: 10, top: 10, bottom: 10),
                                 margin: EdgeInsets.only(bottom: 5),
                                 alignment: Alignment.center,
                                 decoration: CommonFunctions.boxDecoration(),
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: <Widget>[
-                                    Image.asset('images/exit.png',
-                                        height: 30, width: 30),
+                                    Image.asset('images/exit.png', height: 30, width: 30),
                                     Text(
                                       " Thoát ",
                                       style: TextStyle(

@@ -17,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     Provider.of<AppProvider>(context, listen: false).init();
-    Future.delayed(Duration(seconds: 1), () => navigateToHomeScreen());
+    Future.delayed(Duration(seconds: 1), () => navigationPage());
 
     super.initState();
   }
@@ -30,11 +30,6 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void navigationPage() {
     Navigator.of(context).pushReplacementNamed('/home');
-  }
-
-  navigateToHomeScreen() async {
-    var _duration = new Duration(seconds: 3);
-    return new Timer(_duration, navigationPage);
   }
 
   @override
@@ -54,8 +49,8 @@ class _SplashScreenState extends State<SplashScreen> {
           SizedBox(height: 20),
           Center(
             child: Shimmer.fromColors(
-              baseColor: AppColors.yellow,
-              highlightColor: AppColors.dialogAction,
+              baseColor: AppColors.accent,
+              highlightColor: AppColors.textSecondary,
               child: Text(
                 'CẨM NANG SINH TRẮC',
                 textAlign: TextAlign.center,

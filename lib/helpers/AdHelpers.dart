@@ -21,8 +21,8 @@ class AdHelpers {
 
   static Future<void> initialize(BuildContext context) async {
     await MobileAds.instance.initialize();
-    await MobileAds.instance.updateRequestConfiguration(
-        RequestConfiguration(testDeviceIds: [testDevice]));
+    await MobileAds.instance
+        .updateRequestConfiguration(RequestConfiguration(testDeviceIds: [testDevice]));
     _loadInterstitialAd();
   }
 
@@ -65,7 +65,7 @@ class AdHelpers {
       debugPrint('Warning: attempt to show interstitial before loaded.');
       await _loadInterstitialAd();
     }
-    _interstitialAd!.fullScreenContentCallback = FullScreenContentCallback(
+    _interstitialAd?.fullScreenContentCallback = FullScreenContentCallback(
       onAdShowedFullScreenContent: (InterstitialAd ad) =>
           debugPrint('ad onAdShowedFullScreenContent.'),
       onAdDismissedFullScreenContent: (InterstitialAd ad) {

@@ -1,6 +1,6 @@
 plugins {
     id "com.android.application"
-    id "org.jetbrains.kotlin.android" version '1.6.0'
+    id "org.jetbrains.kotlin.android"
     id "dev.flutter.flutter-gradle-plugin"
 }
 
@@ -39,7 +39,7 @@ android {
     defaultConfig {
         multiDexEnabled true
         applicationId "com.seabird.biometry"
-        minSdkVersion 23
+        minSdkVersion flutter.minSdkVersion
         targetSdkVersion 36
         versionCode 41
         versionName "1.2.1"

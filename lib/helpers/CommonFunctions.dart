@@ -13,9 +13,6 @@ class CommonFunctions {
               color: AppColors.error,
               fontSize: 18,
               fontWeight: FontWeight.bold,
-              decoration: TextDecoration.underline,
-              decorationColor: AppColors.error,
-              decorationStyle: TextDecorationStyle.solid,
             )),
         actions: <Widget>[
           new TextButton(
@@ -25,8 +22,6 @@ class CommonFunctions {
               style: TextStyle(
                 color: AppColors.dialogAction,
                 fontWeight: FontWeight.bold,
-                decorationColor: AppColors.dialogAction,
-                decorationStyle: TextDecorationStyle.solid,
               ),
             ),
           ),
@@ -37,8 +32,6 @@ class CommonFunctions {
               style: TextStyle(
                 color: AppColors.error,
                 fontWeight: FontWeight.bold,
-                decorationColor: AppColors.error,
-                decorationStyle: TextDecorationStyle.solid,
               ),
             ),
           ),
@@ -49,7 +42,7 @@ class CommonFunctions {
 
   static BoxDecoration boxDecoration([Color? color]) {
     return BoxDecoration(
-      color: color != null ? color : AppColors.darkGrey,
+      color: color != null ? color : AppColors.cardBg,
       border: Border.all(width: 1.0),
       borderRadius: BorderRadius.all(Radius.circular(20.0) //
           ),
