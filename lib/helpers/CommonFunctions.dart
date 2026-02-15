@@ -1,0 +1,72 @@
+import 'package:seabird.biometry/helpers/AppColors.dart';
+import 'dart:io';
+import 'package:flutter/material.dart';
+
+class CommonFunctions {
+  static void onWillPop(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (context) => new AlertDialog(
+        backgroundColor: AppColors.white,
+        title: new Text('Bạn muốn thoát ứng dụng ?',
+            style: TextStyle(
+              color: AppColors.error,
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              decoration: TextDecoration.underline,
+              decorationColor: AppColors.error,
+              decorationStyle: TextDecorationStyle.solid,
+            )),
+        actions: <Widget>[
+          new TextButton(
+            onPressed: () => Navigator.of(context).pop(false),
+            child: new Text(
+              'KHÔNG',
+              style: TextStyle(
+                color: AppColors.dialogAction,
+                fontWeight: FontWeight.bold,
+                decorationColor: AppColors.dialogAction,
+                decorationStyle: TextDecorationStyle.solid,
+              ),
+            ),
+          ),
+          new TextButton(
+            onPressed: () => exit(0),
+            child: new Text(
+              'CÓ',
+              style: TextStyle(
+                color: AppColors.error,
+                fontWeight: FontWeight.bold,
+                decorationColor: AppColors.error,
+                decorationStyle: TextDecorationStyle.solid,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  static BoxDecoration boxDecoration([Color? color]) {
+    return BoxDecoration(
+      color: color != null ? color : AppColors.darkGrey,
+      border: Border.all(width: 1.0),
+      borderRadius: BorderRadius.all(Radius.circular(20.0) //
+          ),
+    );
+  }
+
+  static Widget getMenuBox(Row row, BuildContext context, String path) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.pushNamed(context, path);
+      },
+      child: Container(
+          padding: EdgeInsets.only(left: 10, top: 10, bottom: 10),
+          margin: EdgeInsets.only(bottom: 16),
+          alignment: Alignment.center,
+          decoration: boxDecoration(),
+          child: row),
+    );
+  }
+}
