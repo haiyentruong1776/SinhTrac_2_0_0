@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:seabird.biometry/helpers/SubTypeScreen.dart';
+import 'package:seabird.biometry/helpers/sub_type_screen.dart';
 
 class We extends StatelessWidget {
   @override

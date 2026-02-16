@@ -1,28 +1,26 @@
-import 'package:seabird.biometry/helpers/AppColors.dart';
+import 'package:seabird.biometry/helpers/app_colors.dart';
 import 'package:flutter/material.dart';
-import 'package:seabird.biometry/helpers/AdBannerTemplate.dart';
-import 'package:seabird.biometry/helpers/AdHelpers.dart';
+import 'package:seabird.biometry/helpers/ad_banner_template.dart';
+import 'package:seabird.biometry/helpers/ad_helpers.dart';
 
-import 'package:seabird.biometry/helpers/CommonFunctions.dart';
+import 'package:seabird.biometry/helpers/common_functions.dart';
 
-class W extends StatelessWidget {
+class L extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    //Ads.loadInterstitialAd();
     AdHelpers.showInterstitialAd();
 
     PageController _textController = PageController(initialPage: 0, keepPage: false);
     num deviceWidth = MediaQuery.of(context).size.width;
-
     return SafeArea(
       child: Scaffold(
           appBar: AppBar(
               title: Row(children: <Widget>[
-                Image.asset('images/eagle.png', width: deviceWidth / 10),
+                Image.asset('images/water.png', width: 50),
                 FittedBox(
                   fit: BoxFit.fitWidth,
                   child: Text(
-                    'Chủng Đại Bàng',
+                    ' Chủng Nước',
                     style: TextStyle(
                       color: AppColors.textPrimary,
                       fontWeight: FontWeight.bold,
@@ -33,12 +31,11 @@ class W extends StatelessWidget {
               iconTheme: new IconThemeData(color: AppColors.textPrimary),
               backgroundColor: AppColors.appBarBg,
               actions: <Widget>[
-                // action button
                 IconButton(
                   icon: Image.asset('images/home_icon.png'),
                   onPressed: () {
                     Navigator.of(context)
-                        .pushNamedAndRemoveUntil('/home', ModalRoute.withName('/w'));
+                        .pushNamedAndRemoveUntil('/home', ModalRoute.withName('/l'));
                   },
                 )
               ]),
@@ -57,12 +54,13 @@ class W extends StatelessWidget {
                         padding: EdgeInsets.only(left: 10, top: 10, bottom: 10),
                         alignment: Alignment.center,
                         decoration: CommonFunctions.boxDecoration(AppColors.lightYellowGreen),
-                        child: Image.asset('images/eagle.png', width: 100),
+                        child: Image.asset('images/water.png', width: 100),
                       ),
                     ),
                     SizedBox(width: 20),
                     Expanded(
-                      child: Text(' Tỉ lệ: 30% trên thế giới. Vân xoáy có tâm (hoa tay).',
+                      child: Text(
+                          ' Tỉ lệ: 65% trên thế giới. Vân móc: không có tâm (không có hoa tay).',
                           style: TextStyle(color: AppColors.textPrimary, fontSize: 15)),
                     ),
                   ],
@@ -86,11 +84,12 @@ class W extends StatelessWidget {
                         Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
+                            Divider(),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: <Widget>[
                                 Container(),
-                                Text('CÁC VÂN CON (9 VÂN):',
+                                Text('CÁC VÂN CON (3 VÂN):',
                                     style: TextStyle(
                                         color: AppColors.textPrimary,
                                         fontSize: 18,
@@ -127,16 +126,16 @@ class W extends StatelessWidget {
                                 children: <Widget>[
                                   GestureDetector(
                                       onTap: () {
-                                        Navigator.pushNamed(context, '/ws');
+                                        Navigator.pushNamed(context, '/lu');
                                       },
-                                      child: Image.asset("images/ws_detail.png",
-                                          width: 0.4 * deviceWidth)),
+                                      child: Image.asset("images/lu_detail.png",
+                                          width: 0.25 * deviceWidth)),
                                   GestureDetector(
                                       onTap: () {
-                                        Navigator.pushNamed(context, '/wt');
+                                        Navigator.pushNamed(context, '/lr');
                                       },
-                                      child: Image.asset("images/wt_detail.png",
-                                          width: 0.4 * deviceWidth))
+                                      child: Image.asset("images/lr_detail.png",
+                                          width: 0.25 * deviceWidth)),
                                 ],
                               ),
                               Divider(),
@@ -145,52 +144,10 @@ class W extends StatelessWidget {
                                 children: <Widget>[
                                   GestureDetector(
                                       onTap: () {
-                                        Navigator.pushNamed(context, '/we');
+                                        Navigator.pushNamed(context, '/lf');
                                       },
-                                      child: Image.asset("images/we_detail.png",
-                                          width: 0.4 * deviceWidth)),
-                                  GestureDetector(
-                                      onTap: () {
-                                        Navigator.pushNamed(context, '/wc');
-                                      },
-                                      child: Image.asset("images/wc_detail.png",
-                                          width: 0.4 * deviceWidth))
-                                ],
-                              ),
-                              Divider(),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                children: <Widget>[
-                                  GestureDetector(
-                                      onTap: () {
-                                        Navigator.pushNamed(context, '/wd');
-                                      },
-                                      child: Image.asset("images/wd_detail.png",
-                                          width: 0.4 * deviceWidth)),
-                                  GestureDetector(
-                                      onTap: () {
-                                        Navigator.pushNamed(context, '/wi');
-                                      },
-                                      child: Image.asset("images/wi_detail.png",
-                                          width: 0.4 * deviceWidth))
-                                ],
-                              ),
-                              Divider(),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                children: <Widget>[
-                                  GestureDetector(
-                                      onTap: () {
-                                        Navigator.pushNamed(context, '/wp');
-                                      },
-                                      child: Image.asset("images/wp_detail.png",
-                                          width: 0.4 * deviceWidth)),
-                                  GestureDetector(
-                                      onTap: () {
-                                        Navigator.pushNamed(context, '/wx');
-                                      },
-                                      child: Image.asset("images/wx_detail.png",
-                                          width: 0.4 * deviceWidth))
+                                      child: Image.asset("images/lf_detail.png",
+                                          width: 0.3 * deviceWidth)),
                                 ],
                               ),
                               Divider()
@@ -252,7 +209,7 @@ class W extends StatelessWidget {
                                     children: <Widget>[
                                       Expanded(
                                         child: Text(
-                                            '- Khó bảo, bướng bỉnh, ko thích bị áp, cứng đầu.',
+                                            '- Linh hoạt và thích nghi như nước, rất thích đám đông và cộng đồng.',
                                             style: TextStyle(
                                                 color: AppColors.textPrimary, fontSize: 15)),
                                       ),
@@ -263,7 +220,7 @@ class W extends StatelessWidget {
                                     children: <Widget>[
                                       Expanded(
                                         child: Text(
-                                            '- Có khả năng tập trung mục tiêu cao, ít bị xao nhãng.',
+                                            '- Khả năng bắt chước vượt trội (cần phải có hình mẫu), học nhanh trong môi trường và trong xã hội, qua trải nghiệm thành công, thất bại của cuộc sống.',
                                             style: TextStyle(
                                                 color: AppColors.textPrimary, fontSize: 15)),
                                       ),
@@ -274,17 +231,7 @@ class W extends StatelessWidget {
                                     children: <Widget>[
                                       Expanded(
                                         child: Text(
-                                            '- Bạn thích người khác lắng nghe và tuân thủ sự sắp xếp của bạn. Không thích bị chỉ ra điểm sai.',
-                                            style: TextStyle(
-                                                color: AppColors.textPrimary, fontSize: 15)),
-                                      ),
-                                    ],
-                                  ),
-                                  Divider(),
-                                  Row(
-                                    children: <Widget>[
-                                      Expanded(
-                                        child: Text('- Tập trung vào mục tiêu của mình.',
+                                            '- Sẵn sàng hòa mình vào dòng chảy của cuộc sống.',
                                             style: TextStyle(
                                                 color: AppColors.textPrimary, fontSize: 15)),
                                       ),
@@ -295,7 +242,7 @@ class W extends StatelessWidget {
                                     children: <Widget>[
                                       Expanded(
                                         child: Text(
-                                            '- Nội tâm khép kín, ít chia sẻ với người khác, thường thích học tập và chơi một mình hơn là các hoạt động nhóm.',
+                                            '- Thân thiện, cởi mở - Mở cửa cho những ý tưởng mới.',
                                             style: TextStyle(
                                                 color: AppColors.textPrimary, fontSize: 15)),
                                       ),
@@ -306,27 +253,7 @@ class W extends StatelessWidget {
                                     children: <Widget>[
                                       Expanded(
                                         child: Text(
-                                            '- Tính cá nhân cao nên cái tôi lớn, muốn mình làm trung tâm.',
-                                            style: TextStyle(
-                                                color: AppColors.textPrimary, fontSize: 15)),
-                                      ),
-                                    ],
-                                  ),
-                                  Divider(),
-                                  Row(
-                                    children: <Widget>[
-                                      Expanded(
-                                        child: Text('- Mạnh mẽ- Chủ Động- Quyết tâm cao.',
-                                            style: TextStyle(
-                                                color: AppColors.textPrimary, fontSize: 15)),
-                                      ),
-                                    ],
-                                  ),
-                                  Divider(),
-                                  Row(
-                                    children: <Widget>[
-                                      Expanded(
-                                        child: Text('- Tự lập, chủ động. Tự thích làm mọi việc.',
+                                            '- Nói chuyện cởi mở, trong công việc thì dễ thương lượng, cả tin (dễ thuyết phục).',
                                             style: TextStyle(
                                                 color: AppColors.textPrimary, fontSize: 15)),
                                       ),
@@ -337,7 +264,7 @@ class W extends StatelessWidget {
                                     children: <Widget>[
                                       Expanded(
                                         child: Text(
-                                            '- Tính cá nhân cao nên đôi khi khó hòa hợp với đội nhóm.',
+                                            '- Thích được khen, thích được động viên, không thích xung đột, mâu thuẫn; buồn khi bị chê bai, so sánh với người khác (chán luôn, chẳng muốn làm nữa).',
                                             style: TextStyle(
                                                 color: AppColors.textPrimary, fontSize: 15)),
                                       ),
@@ -348,7 +275,7 @@ class W extends StatelessWidget {
                                     children: <Widget>[
                                       Expanded(
                                         child: Text(
-                                            '- Có xu hướng muốn áp đặt, thay đổi người khác theo quan điểm của mình.',
+                                            '- Thích được chia sẻ, tâm sự cũng như lắng nghe người khác, dễ mủi lòng, đồng cảm.',
                                             style: TextStyle(
                                                 color: AppColors.textPrimary, fontSize: 15)),
                                       ),
@@ -359,7 +286,28 @@ class W extends StatelessWidget {
                                     children: <Widget>[
                                       Expanded(
                                         child: Text(
-                                            '- Năng động, tính mục tiêu và làm việc chăm chỉ với một sự kiên trì và ý chí mạnh mẽ.',
+                                            '- Thích hoạt động cộng đồng, giao tiếp, từ thiện…',
+                                            style: TextStyle(
+                                                color: AppColors.textPrimary, fontSize: 15)),
+                                      ),
+                                    ],
+                                  ),
+                                  Divider(),
+                                  Row(
+                                    children: <Widget>[
+                                      Expanded(
+                                        child: Text(
+                                            '- Khác với chủng đại bàng, người chủng nước tính quyết đoán không cao.',
+                                            style: TextStyle(
+                                                color: AppColors.textPrimary, fontSize: 15)),
+                                      ),
+                                    ],
+                                  ),
+                                  Divider(),
+                                  Row(
+                                    children: <Widget>[
+                                      Expanded(
+                                        child: Text('- Kết nối đám đông, cộng đồng tốt.',
                                             style: TextStyle(
                                                 color: AppColors.textPrimary, fontSize: 15)),
                                       ),
@@ -412,7 +360,7 @@ class W extends StatelessWidget {
                                   children: <Widget>[
                                     Expanded(
                                       child: Text(
-                                          '- Không nên mắng trẻ, góp ý trước đông người mà chờ lúc riêng tư, lúc nói chuyện nhẹ nhàng, thoải mái thì mới góp ý nhẹ nhàng.',
+                                          '- Cần sự động viên và khích lệ thông qua những lời khen, những câu nói khích lệ chứ không phải những lời chê bai.',
                                           style: TextStyle(
                                               color: AppColors.textPrimary, fontSize: 15)),
                                     ),
@@ -423,7 +371,7 @@ class W extends StatelessWidget {
                                   children: <Widget>[
                                     Expanded(
                                       child: Text(
-                                          '- Thu nhỏ làm 1 mục tiêu trước, sau đó hoàn thành rồi tiếp tục mục tiêu tiếp theo. Chọn 1 thứ thôi sẽ tuyệt vời hơn.',
+                                          '- Nếu bạn là chủng nước, bạn cần 1 nhà lãnh đạo, quản lý tốt.',
                                           style: TextStyle(
                                               color: AppColors.textPrimary, fontSize: 15)),
                                     ),
@@ -434,17 +382,7 @@ class W extends StatelessWidget {
                                   children: <Widget>[
                                     Expanded(
                                       child: Text(
-                                          '- Tạo ra những trải nghiệm thực tế giúp họ tự tin hơn.',
-                                          style: TextStyle(
-                                              color: AppColors.textPrimary, fontSize: 15)),
-                                    ),
-                                  ],
-                                ),
-                                Divider(),
-                                Row(
-                                  children: <Widget>[
-                                    Expanded(
-                                      child: Text('- Với trẻ có vân tay này, đừng bao giờ dọa.',
+                                          '- Tìm những người sở hữu vân tay chủng đại bàng tốt để hợp tác làm ăn.',
                                           style: TextStyle(
                                               color: AppColors.textPrimary, fontSize: 15)),
                                     ),
@@ -455,7 +393,7 @@ class W extends StatelessWidget {
                                   children: <Widget>[
                                     Expanded(
                                       child: Text(
-                                          '- Bố mẹ nói là làm, nói 1 là 1, 2 là 2 còn nếu không về sau đừng hòng nói bé nghe.',
+                                          '- Bạn thương người nên dễ bị dụ lắm. Nên cẩn thận đừng vội cả tin mà hãy thảo luận với những người thân trước.',
                                           style: TextStyle(
                                               color: AppColors.textPrimary, fontSize: 15)),
                                     ),
@@ -465,17 +403,8 @@ class W extends StatelessWidget {
                                 Row(
                                   children: <Widget>[
                                     Expanded(
-                                      child: Text('- Cần cho trẻ tham gia các hoạt động tập thể.',
-                                          style: TextStyle(
-                                              color: AppColors.textPrimary, fontSize: 15)),
-                                    ),
-                                  ],
-                                ),
-                                Divider(),
-                                Row(
-                                  children: <Widget>[
-                                    Expanded(
-                                      child: Text('- Không nuông chiều bé quá.',
+                                      child: Text(
+                                          '- Bàn tay bạn nhiều chủng Loop quá nên tìm đến những người chủng WE truyền lửa , những người sở hữu chủng WT mục tiêu cao.',
                                           style: TextStyle(
                                               color: AppColors.textPrimary, fontSize: 15)),
                                     ),

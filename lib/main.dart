@@ -1,31 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:seabird.biometry/screens/A.dart';
-import 'package:seabird.biometry/screens/Ae.dart';
-import 'package:seabird.biometry/screens/Ar.dart';
-import 'package:seabird.biometry/screens/As.dart';
-import 'package:seabird.biometry/screens/At.dart';
-import 'package:seabird.biometry/screens/Au.dart';
-import 'package:seabird.biometry/screens/Hist.dart';
-import 'package:seabird.biometry/screens/Home.dart';
-import 'package:seabird.biometry/screens/Intro.dart';
-import 'package:seabird.biometry/screens/L.dart';
-import 'package:seabird.biometry/screens/Lf.dart';
-import 'package:seabird.biometry/screens/Lr.dart';
-import 'package:seabird.biometry/screens/Lu.dart';
-import 'package:seabird.biometry/screens/MainTypes.dart';
-import 'package:seabird.biometry/screens/W.dart';
-import 'package:seabird.biometry/screens/Wc.dart';
-import 'package:seabird.biometry/screens/Wd.dart';
-import 'package:seabird.biometry/screens/We.dart';
-import 'package:seabird.biometry/screens/Wi.dart';
-import 'package:seabird.biometry/screens/Wp.dart';
-import 'package:seabird.biometry/screens/Ws.dart';
-import 'package:seabird.biometry/screens/Wt.dart';
-import 'package:seabird.biometry/screens/Wx.dart';
+import 'package:seabird.biometry/screens/a.dart';
+import 'package:seabird.biometry/screens/ae.dart';
+import 'package:seabird.biometry/screens/ar.dart';
+import 'package:seabird.biometry/screens/as.dart';
+import 'package:seabird.biometry/screens/at.dart';
+import 'package:seabird.biometry/screens/au.dart';
+import 'package:seabird.biometry/screens/hist.dart';
+import 'package:seabird.biometry/screens/home.dart';
+import 'package:seabird.biometry/screens/intro.dart';
+import 'package:seabird.biometry/screens/l.dart';
+import 'package:seabird.biometry/screens/lf.dart';
+import 'package:seabird.biometry/screens/lr.dart';
+import 'package:seabird.biometry/screens/lu.dart';
+import 'package:seabird.biometry/screens/main_types.dart';
+import 'package:seabird.biometry/screens/w.dart';
+import 'package:seabird.biometry/screens/wc.dart';
+import 'package:seabird.biometry/screens/wd.dart';
+import 'package:seabird.biometry/screens/we.dart';
+import 'package:seabird.biometry/screens/wi.dart';
+import 'package:seabird.biometry/screens/wp.dart';
+import 'package:seabird.biometry/screens/ws.dart';
+import 'package:seabird.biometry/screens/wt.dart';
+import 'package:seabird.biometry/screens/wx.dart';
 
-import 'AppProvider.dart';
-import 'screens/SplashScreen.dart';
+import 'app_provider.dart';
+import 'screens/splash_screen.dart';
 
 void main() {
   runApp(

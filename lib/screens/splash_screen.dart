@@ -1,11 +1,11 @@
-import 'package:seabird.biometry/helpers/AppColors.dart';
+import 'package:seabird.biometry/helpers/app_colors.dart';
 import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'package:seabird.biometry/AppProvider.dart';
-import 'package:seabird.biometry/helpers/AdHelpers.dart';
+import 'package:seabird.biometry/app_provider.dart';
+import 'package:seabird.biometry/helpers/ad_helpers.dart';
 import 'package:shimmer/shimmer.dart';
 
 class SplashScreen extends StatefulWidget {

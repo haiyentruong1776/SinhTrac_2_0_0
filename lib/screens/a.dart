@@ -1,9 +1,9 @@
-import 'package:seabird.biometry/helpers/AppColors.dart';
+import 'package:seabird.biometry/helpers/app_colors.dart';
 import 'package:flutter/material.dart';
-import 'package:seabird.biometry/helpers/AdBannerTemplate.dart';
-import 'package:seabird.biometry/helpers/AdHelpers.dart';
+import 'package:seabird.biometry/helpers/ad_banner_template.dart';
+import 'package:seabird.biometry/helpers/ad_helpers.dart';
 
-import 'package:seabird.biometry/helpers/CommonFunctions.dart';
+import 'package:seabird.biometry/helpers/common_functions.dart';
 
 class A extends StatelessWidget {
   @override

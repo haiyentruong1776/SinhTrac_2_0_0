@@ -1,4 +1,4 @@
-import 'package:seabird.biometry/helpers/AppColors.dart';
+import 'package:seabird.biometry/helpers/app_colors.dart';
 import 'dart:io';
 import 'package:flutter/material.dart';
 
@@ -57,7 +57,7 @@ class CommonFunctions {
       child: Container(
           padding: EdgeInsets.only(left: 10, top: 10, bottom: 10),
           margin: EdgeInsets.only(bottom: 16),
-          alignment: Alignment.center,
+          alignment: Alignment.centerLeft,
           decoration: boxDecoration(),
           child: row),
     );

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
-import 'package:seabird.biometry/helpers/AdHelpers.dart';
+import 'package:seabird.biometry/helpers/ad_helpers.dart';
 
 class AdBannerTemplate extends StatefulWidget {
   const AdBannerTemplate({
