@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:seabird.biometry/app_provider.dart';
 import 'package:seabird.biometry/helpers/ad_banner_template.dart';
 import 'package:seabird.biometry/helpers/common_functions.dart';
+import 'package:seabird.biometry/l10n/app_localizations.dart';
 
 void main() => runApp(Home());
 
@@ -24,6 +25,7 @@ class HomeState extends State<Home> with SingleTickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return PopScope(
         onPopInvokedWithResult: (didPop, _) {
           if (didPop) _onWillPop();
@@ -39,7 +41,7 @@ class HomeState extends State<Home> with SingleTickerProviderStateMixin {
                   FittedBox(
                       fit: BoxFit.fitWidth,
                       child: Text(
-                        "Cẩm Nang Sinh Trắc",
+                        l10n.appTitle,
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: AppColors.textPrimary,
@@ -68,6 +70,7 @@ class HomeState extends State<Home> with SingleTickerProviderStateMixin {
 class BodyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     num deviceHeight = MediaQuery.of(context).size.height;
 
     return new Stack(children: <Widget>[
@@ -98,7 +101,7 @@ class BodyWidget extends StatelessWidget {
                         child: ListView(children: <Widget>[
                           _menuItem(
                             icon: 'images/info.png',
-                            label: ' Giới Thiệu',
+                            label: l10n.homeMenuIntro,
                             onTap: () => Navigator.pushNamed(context, '/intro'),
                           ),
                           _menuItem(
@@ -106,22 +109,22 @@ class BodyWidget extends StatelessWidget {
                               borderRadius: BorderRadius.all(Radius.circular(20.0)),
                               child: Image.asset('images/logo.png', height: 30, width: 30),
                             ),
-                            label: ' Tra Cứu Sinh Trắc',
+                            label: l10n.homeMenuLookup,
                             onTap: () => Navigator.pushNamed(context, '/mainTypes'),
                           ),
                           _menuItem(
                             icon: 'images/history.png',
-                            label: ' Lịch Sử',
+                            label: l10n.homeMenuHistory,
                             onTap: () => Navigator.pushNamed(context, '/history'),
                           ),
                           _menuItem(
                             icon: 'images/star.png',
-                            label: ' Rate 5 Sao',
+                            label: l10n.homeMenuRate,
                             onTap: () => InAppReview.instance.openStoreListing(),
                           ),
                           _menuItem(
                             icon: 'images/exit.png',
-                            label: ' Thoát',
+                            label: l10n.homeMenuExit,
                             textColor: AppColors.error,
                             onTap: () => CommonFunctions.onWillPop(context),
                             bottomMargin: 5,

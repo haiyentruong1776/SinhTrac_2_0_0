@@ -1,7 +1,9 @@
 import 'package:seabird.biometry/helpers/app_colors.dart';
 import 'package:flutter/material.dart';
-import 'package:seabird.biometry/helpers/ad_banner_template.dart';
 import 'package:seabird.biometry/helpers/ad_helpers.dart';
+import 'package:seabird.biometry/helpers/ad_banner_template.dart';
+import 'package:seabird.biometry/helpers/common_functions.dart';
+import 'package:seabird.biometry/l10n/app_localizations.dart';
 
 /// Data for a single header image shown at the top of the screen.
 class HeaderImage {
@@ -60,11 +62,12 @@ class SubTypeScreen extends StatelessWidget {
           ),
           AdBannerTemplate(
             child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16),
               child: Center(
                 child: Column(children: <Widget>[
                   _buildHeaderImages(deviceWidth),
                   Divider(),
-                  _buildSectionTitle(),
+                  _buildSectionTitle(context),
                   Expanded(
                     child: Container(
                       child: PageView(
@@ -103,13 +106,7 @@ class SubTypeScreen extends StatelessWidget {
       iconTheme: IconThemeData(color: AppColors.textPrimary),
       backgroundColor: AppColors.appBarBg,
       actions: <Widget>[
-        IconButton(
-          icon: Image.asset('images/home_icon.png'),
-          onPressed: () {
-            Navigator.of(context)
-                .pushNamedAndRemoveUntil('/home', ModalRoute.withName(data.homeRoute));
-          },
-        ),
+        CommonFunctions.homeButton(context, data.homeRoute),
       ],
     );
   }
@@ -124,9 +121,9 @@ class SubTypeScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildSectionTitle() {
+  Widget _buildSectionTitle(BuildContext context) {
     return Text(
-      'ĐẶC TÍNH:',
+      AppLocalizations.of(context)!.sectionProperties,
       style: TextStyle(
         color: AppColors.textPrimary,
         fontSize: 18,

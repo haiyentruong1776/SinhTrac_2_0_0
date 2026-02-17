@@ -1,14 +1,16 @@
 import 'package:seabird.biometry/helpers/app_colors.dart';
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:seabird.biometry/l10n/app_localizations.dart';
 
 class CommonFunctions {
   static void onWillPop(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     showDialog(
       context: context,
       builder: (context) => new AlertDialog(
         backgroundColor: AppColors.white,
-        title: new Text('Bạn muốn thoát ứng dụng ?',
+        title: new Text(l10n.exitDialogTitle,
             style: TextStyle(
               color: AppColors.error,
               fontSize: 18,
@@ -18,7 +20,7 @@ class CommonFunctions {
           new TextButton(
             onPressed: () => Navigator.of(context).pop(false),
             child: new Text(
-              'KHÔNG',
+              l10n.exitNo,
               style: TextStyle(
                 color: AppColors.dialogAction,
                 fontWeight: FontWeight.bold,
@@ -28,7 +30,7 @@ class CommonFunctions {
           new TextButton(
             onPressed: () => exit(0),
             child: new Text(
-              'CÓ',
+              l10n.exitYes,
               style: TextStyle(
                 color: AppColors.error,
                 fontWeight: FontWeight.bold,
@@ -60,6 +62,15 @@ class CommonFunctions {
           alignment: Alignment.centerLeft,
           decoration: boxDecoration(),
           child: row),
+    );
+  }
+
+  static IconButton homeButton(BuildContext context, String currentRoute) {
+    return IconButton(
+      icon: Image.asset('images/home_icon.png', width: 32, height: 32),
+      onPressed: () {
+        Navigator.of(context).pushNamedAndRemoveUntil('/home', ModalRoute.withName(currentRoute));
+      },
     );
   }
 }

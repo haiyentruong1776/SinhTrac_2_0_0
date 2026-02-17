@@ -7,6 +7,7 @@ import 'package:provider/provider.dart';
 import 'package:seabird.biometry/app_provider.dart';
 import 'package:seabird.biometry/helpers/ad_helpers.dart';
 import 'package:shimmer/shimmer.dart';
+import 'package:seabird.biometry/l10n/app_localizations.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -52,7 +53,7 @@ class _SplashScreenState extends State<SplashScreen> {
               baseColor: AppColors.accent,
               highlightColor: AppColors.textSecondary,
               child: Text(
-                'CẨM NANG SINH TRẮC',
+                AppLocalizations.of(context)!.splashTitle,
                 textAlign: TextAlign.center,
                 style: GoogleFonts.tomorrow(
                   fontWeight: FontWeight.bold,

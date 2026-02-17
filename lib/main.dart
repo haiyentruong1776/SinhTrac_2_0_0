@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seabird.biometry/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:seabird.biometry/screens/a.dart';
 import 'package:seabird.biometry/screens/ae.dart';
@@ -35,90 +36,62 @@ void main() {
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
+        localizationsDelegates: AppLocalizations.localizationsDelegates,
+        supportedLocales: AppLocalizations.supportedLocales,
         home: SplashScreen(),
         onGenerateRoute: (RouteSettings settings) {
           switch (settings.name) {
             case '/home':
-              return SlideRightRoute(widget: Home());
+              return MaterialPageRoute(builder: (_) => Home());
             case '/intro':
-              return SlideRightRoute(widget: Intro());
+              return MaterialPageRoute(builder: (_) => Intro());
             case '/history':
-              return SlideRightRoute(widget: Hist());
+              return MaterialPageRoute(builder: (_) => Hist());
             case '/mainTypes':
-              return SlideRightRoute(widget: MainTypes());
+              return MaterialPageRoute(builder: (_) => MainTypes());
             case '/w':
-              return SlideRightRoute(widget: W());
+              return MaterialPageRoute(builder: (_) => W());
             case '/ws':
-              return SlideRightRoute(widget: Ws());
+              return MaterialPageRoute(builder: (_) => Ws());
             case '/wc':
-              return SlideRightRoute(widget: Wc());
+              return MaterialPageRoute(builder: (_) => Wc());
             case '/wd':
-              return SlideRightRoute(widget: Wd());
+              return MaterialPageRoute(builder: (_) => Wd());
             case '/we':
-              return SlideRightRoute(widget: We());
+              return MaterialPageRoute(builder: (_) => We());
             case '/wi':
-              return SlideRightRoute(widget: Wi());
+              return MaterialPageRoute(builder: (_) => Wi());
             case '/wp':
-              return SlideRightRoute(widget: Wp());
+              return MaterialPageRoute(builder: (_) => Wp());
             case '/wt':
-              return SlideRightRoute(widget: Wt());
+              return MaterialPageRoute(builder: (_) => Wt());
             case '/wx':
-              return SlideRightRoute(widget: Wx());
+              return MaterialPageRoute(builder: (_) => Wx());
             case '/a':
-              return SlideRightRoute(widget: A());
+              return MaterialPageRoute(builder: (_) => A());
             case '/ae':
-              return SlideRightRoute(widget: Ae());
+              return MaterialPageRoute(builder: (_) => Ae());
             case '/ar':
-              return SlideRightRoute(widget: Ar());
+              return MaterialPageRoute(builder: (_) => Ar());
             case '/as':
-              return SlideRightRoute(widget: As());
+              return MaterialPageRoute(builder: (_) => As());
             case '/at':
-              return SlideRightRoute(widget: At());
+              return MaterialPageRoute(builder: (_) => At());
             case '/au':
-              return SlideRightRoute(widget: Au());
+              return MaterialPageRoute(builder: (_) => Au());
             case '/l':
-              return SlideRightRoute(widget: L());
+              return MaterialPageRoute(builder: (_) => L());
             case '/lf':
-              return SlideRightRoute(widget: Lf());
+              return MaterialPageRoute(builder: (_) => Lf());
             case '/lr':
-              return SlideRightRoute(widget: Lr());
+              return MaterialPageRoute(builder: (_) => Lr());
             case '/lu':
-              return SlideRightRoute(widget: Lu());
+              return MaterialPageRoute(builder: (_) => Lu());
             default:
-              return SlideRightRoute(widget: Home());
+              return MaterialPageRoute(builder: (_) => Home());
           }
         },
       ),
     ),
   );
-}
-
-class SlideRightRoute extends PageRouteBuilder {
-  SlideRightRoute({required Widget widget})
-      : super(
-          pageBuilder: (
-            BuildContext context,
-            Animation<double> animation,
-            Animation<double> animation2,
-          ) =>
-              widget,
-          transitionsBuilder: (
-            BuildContext context,
-            Animation<double> animation,
-            Animation<double> animation2,
-            Widget widget,
-          ) =>
-              ScaleTransition(
-            scale: Tween<double>(
-              begin: 0.0,
-              end: 1.0,
-            ).animate(
-              CurvedAnimation(
-                parent: animation,
-                curve: Curves.bounceInOut,
-              ),
-            ),
-            child: widget,
-          ),
-        );
 }
