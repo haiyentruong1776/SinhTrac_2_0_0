@@ -77,7 +77,7 @@ class AdHelpers {
         ad.dispose();
       },
     );
-    _interstitialAd?.show().whenComplete(() => _interstitialAd = null);
+    _interstitialAd!.show().whenComplete(() => _interstitialAd = null);
   }
 
   // static void showRewaredVideoAd() {
