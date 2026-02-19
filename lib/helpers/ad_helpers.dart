@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
+// import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 // const String APP_ID = "ca-app-pub-8790092287859946~9130610364";
 
@@ -15,14 +15,14 @@ const int maxFailedLoadAttempts = 3;
 class AdHelpers {
   // static double marginTopForAdmobBanner = 0;
 
-  static final AdRequest request = AdRequest(nonPersonalizedAds: true);
+  // static final AdRequest request = AdRequest(nonPersonalizedAds: true);
 
-  static InterstitialAd? _interstitialAd;
+  // static InterstitialAd? _interstitialAd;
 
   static Future<void> initialize(BuildContext context) async {
-    await MobileAds.instance.initialize();
-    await MobileAds.instance
-        .updateRequestConfiguration(RequestConfiguration(testDeviceIds: [testDevice]));
+    // await MobileAds.instance.initialize();
+    // await MobileAds.instance
+    //     .updateRequestConfiguration(RequestConfiguration(testDeviceIds: [testDevice]));
     _loadInterstitialAd();
   }
 
@@ -35,23 +35,23 @@ class AdHelpers {
     // }
   }
 
-  static void showInterstitialAd() => _interstitialAd?.show();
+  // static void showInterstitialAd() => _interstitialAd?.show();
 
   static Future<void> _loadInterstitialAd() async {
-    await InterstitialAd.load(
-        adUnitId: INTERSTITIAL_ID,
-        request: request,
-        adLoadCallback: InterstitialAdLoadCallback(
-          onAdLoaded: (InterstitialAd ad) {
-            debugPrint('$ad loaded');
-            _interstitialAd = ad;
-            _interstitialAd!.setImmersiveMode(true);
-          },
-          onAdFailedToLoad: (LoadAdError error) {
-            debugPrint('InterstitialAd failed to load: ${error.message}.');
-            _interstitialAd = null;
-          },
-        ));
+    // await InterstitialAd.load(
+    //     adUnitId: INTERSTITIAL_ID,
+    //     request: request,
+    //     adLoadCallback: InterstitialAdLoadCallback(
+    //       onAdLoaded: (InterstitialAd ad) {
+    //         debugPrint('$ad loaded');
+    //         _interstitialAd = ad;
+    //         _interstitialAd!.setImmersiveMode(true);
+    //       },
+    //       onAdFailedToLoad: (LoadAdError error) {
+    //         debugPrint('InterstitialAd failed to load: ${error.message}.');
+    //         _interstitialAd = null;
+    //       },
+    //     ));
   }
 
   static Future<void> showInterstitialAdRandom() async {
@@ -61,23 +61,23 @@ class AdHelpers {
   }
 
   static Future<void> loadShowInterstitialAd() async {
-    if (_interstitialAd == null) {
-      debugPrint('Warning: attempt to show interstitial before loaded.');
-      await _loadInterstitialAd();
-    }
-    _interstitialAd?.fullScreenContentCallback = FullScreenContentCallback(
-      onAdShowedFullScreenContent: (InterstitialAd ad) =>
-          debugPrint('ad onAdShowedFullScreenContent.'),
-      onAdDismissedFullScreenContent: (InterstitialAd ad) {
-        debugPrint('$ad onAdDismissedFullScreenContent.');
-        ad.dispose();
-      },
-      onAdFailedToShowFullScreenContent: (InterstitialAd ad, AdError error) {
-        debugPrint('$ad onAdFailedToShowFullScreenContent: $error');
-        ad.dispose();
-      },
-    );
-    _interstitialAd?.show().whenComplete(() => _interstitialAd = null);
+    // if (_interstitialAd == null) {
+    //   debugPrint('Warning: attempt to show interstitial before loaded.');
+    //   await _loadInterstitialAd();
+    // }
+    // _interstitialAd?.fullScreenContentCallback = FullScreenContentCallback(
+    //   onAdShowedFullScreenContent: (InterstitialAd ad) =>
+    //       debugPrint('ad onAdShowedFullScreenContent.'),
+    //   onAdDismissedFullScreenContent: (InterstitialAd ad) {
+    //     debugPrint('$ad onAdDismissedFullScreenContent.');
+    //     ad.dispose();
+    //   },
+    //   onAdFailedToShowFullScreenContent: (InterstitialAd ad, AdError error) {
+    //     debugPrint('$ad onAdFailedToShowFullScreenContent: $error');
+    //     ad.dispose();
+    //   },
+    // );
+    // _interstitialAd!.show().whenComplete(() => _interstitialAd = null);
   }
 
   // static void showRewaredVideoAd() {
