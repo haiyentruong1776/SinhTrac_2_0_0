@@ -1,5 +1,6 @@
 # Build output
 build/
+.dart_tool/
 
 # Dart tool
 .dart_tool/
