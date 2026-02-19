@@ -65,6 +65,10 @@ class SubTypeScreen extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 16),
               child: Center(
                 child: Column(children: <Widget>[
+                  Text(data.title,
+                      style: TextStyle(
+                          color: AppColors.textPrimary, fontSize: 20, fontWeight: FontWeight.bold)),
+                  SizedBox(height: 16),
                   _buildHeaderImages(deviceWidth),
                   Divider(),
                   _buildSectionTitle(context),
@@ -91,18 +95,18 @@ class SubTypeScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Image.asset(data.iconImage, width: deviceWidth / 12),
-          FittedBox(
-            fit: BoxFit.fitWidth,
-            child: Text(
-              data.title,
-              style: TextStyle(
-                color: AppColors.textPrimary,
-                fontWeight: FontWeight.bold,
-              ),
+          Text(
+            data.title.split('(').first,
+            overflow: TextOverflow.ellipsis,
+            style: TextStyle(
+              color: AppColors.textPrimary,
+              fontWeight: FontWeight.bold,
+              fontSize: 16,
             ),
           ),
         ],
       ),
+      centerTitle: true,
       iconTheme: IconThemeData(color: AppColors.textPrimary),
       backgroundColor: AppColors.appBarBg,
       actions: <Widget>[
