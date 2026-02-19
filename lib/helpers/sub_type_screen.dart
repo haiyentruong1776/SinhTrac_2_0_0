@@ -72,7 +72,7 @@ class SubTypeScreen extends StatelessWidget {
                   _buildHeaderImages(deviceWidth),
                   Divider(),
                   _buildSectionTitle(context),
-                  Expanded(
+                  Flexible(
                     child: Container(
                       child: PageView(
                         controller: textController,
@@ -148,7 +148,7 @@ class SubTypeScreen extends StatelessWidget {
         child: Column(children: <Widget>[
           _buildPageHeader(controller, index, page.title, isFirst, isLast),
           Divider(),
-          Expanded(
+          Flexible(
             child: ListView(
               padding: EdgeInsets.only(left: 10, right: 10),
               children: <Widget>[
@@ -157,7 +157,7 @@ class SubTypeScreen extends StatelessWidget {
                       .map((item) => Column(
                             children: [
                               Row(children: <Widget>[
-                                Expanded(
+                                Flexible(
                                   child: Text(item,
                                       style: TextStyle(color: AppColors.textPrimary, fontSize: 15)),
                                 ),
@@ -180,6 +180,7 @@ class SubTypeScreen extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
+        SizedBox(height: 8),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[

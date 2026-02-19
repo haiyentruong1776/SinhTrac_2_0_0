@@ -2528,4 +2528,73 @@ class AppLocalizationsVi extends AppLocalizations {
   @override
   String get luComm6 =>
       '- Dùng phương pháp tương tác khi hướng dẫn: thảo luận, để người khác đưa ra câu hỏi và mình trả lời.';
+
+  @override
+  String get homeMenuQuiz => ' Khám Phá Bản Thân';
+
+  @override
+  String get quizTitle => 'Khám Phá Bản Thân';
+
+  @override
+  String get quizSelectPattern => 'Chọn chủng vân tay cho ngón này:';
+
+  @override
+  String get quizFingerRight1 => 'Ngón cái (P)';
+
+  @override
+  String get quizFingerRight2 => 'Ngón trỏ (P)';
+
+  @override
+  String get quizFingerRight3 => 'Ngón giữa (P)';
+
+  @override
+  String get quizFingerRight4 => 'Ngón áp út (P)';
+
+  @override
+  String get quizFingerRight5 => 'Ngón út (P)';
+
+  @override
+  String get quizFingerLeft1 => 'Ngón cái (T)';
+
+  @override
+  String get quizFingerLeft2 => 'Ngón trỏ (T)';
+
+  @override
+  String get quizFingerLeft3 => 'Ngón giữa (T)';
+
+  @override
+  String get quizFingerLeft4 => 'Ngón áp út (T)';
+
+  @override
+  String get quizFingerLeft5 => 'Ngón út (T)';
+
+  @override
+  String get quizNext => 'Tiếp theo';
+
+  @override
+  String get quizPrev => 'Quay lại';
+
+  @override
+  String get quizViewResult => 'Xem kết quả';
+
+  @override
+  String get quizResultTitle => 'Kết Quả Của Bạn';
+
+  @override
+  String get quizDominantType => 'Chủng chính của bạn:';
+
+  @override
+  String get quizTypeWhorl => 'Chủng Đại Bàng (Vân xoáy)';
+
+  @override
+  String get quizTypeLoop => 'Chủng Nước (Vân móc)';
+
+  @override
+  String get quizTypeArch => 'Chủng Núi (Vân cung)';
+
+  @override
+  String get quizExploreDetail => 'Xem chi tiết';
+
+  @override
+  String get quizRetake => 'Làm lại';
 }

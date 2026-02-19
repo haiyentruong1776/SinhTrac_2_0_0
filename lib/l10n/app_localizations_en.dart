@@ -2495,4 +2495,74 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get luComm6 =>
       '- Use interactive methods when guiding: discuss, let others pose questions for them to answer.';
+
+  @override
+  String get homeMenuQuiz => ' Self-Discovery';
+
+  @override
+  String get quizTitle => 'Self-Discovery Quiz';
+
+  @override
+  String get quizSelectPattern =>
+      'Select the fingerprint type for this finger:';
+
+  @override
+  String get quizFingerRight1 => 'Thumb (R)';
+
+  @override
+  String get quizFingerRight2 => 'Index (R)';
+
+  @override
+  String get quizFingerRight3 => 'Middle (R)';
+
+  @override
+  String get quizFingerRight4 => 'Ring (R)';
+
+  @override
+  String get quizFingerRight5 => 'Pinky (R)';
+
+  @override
+  String get quizFingerLeft1 => 'Thumb (L)';
+
+  @override
+  String get quizFingerLeft2 => 'Index (L)';
+
+  @override
+  String get quizFingerLeft3 => 'Middle (L)';
+
+  @override
+  String get quizFingerLeft4 => 'Ring (L)';
+
+  @override
+  String get quizFingerLeft5 => 'Pinky (L)';
+
+  @override
+  String get quizNext => 'Next';
+
+  @override
+  String get quizPrev => 'Back';
+
+  @override
+  String get quizViewResult => 'View Result';
+
+  @override
+  String get quizResultTitle => 'Your Result';
+
+  @override
+  String get quizDominantType => 'Your dominant type:';
+
+  @override
+  String get quizTypeWhorl => 'Eagle Group (Whorl)';
+
+  @override
+  String get quizTypeLoop => 'Water Group (Loop)';
+
+  @override
+  String get quizTypeArch => 'Mountain Group (Arch)';
+
+  @override
+  String get quizExploreDetail => 'Explore Detail';
+
+  @override
+  String get quizRetake => 'Retake';
 }

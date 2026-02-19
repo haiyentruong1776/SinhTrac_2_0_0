@@ -113,6 +113,11 @@ class BodyWidget extends StatelessWidget {
                             onTap: () => Navigator.pushNamed(context, '/mainTypes'),
                           ),
                           _menuItem(
+                            icon: 'images/intro_icon.png',
+                            label: l10n.homeMenuQuiz,
+                            onTap: () => Navigator.pushNamed(context, '/quiz'),
+                          ),
+                          _menuItem(
                             icon: 'images/history.png',
                             label: l10n.homeMenuHistory,
                             onTap: () => Navigator.pushNamed(context, '/history'),

@@ -4201,6 +4201,144 @@ abstract class AppLocalizations {
   /// In vi, this message translates to:
   /// **'- Dùng phương pháp tương tác khi hướng dẫn: thảo luận, để người khác đưa ra câu hỏi và mình trả lời.'**
   String get luComm6;
+
+  /// No description provided for @homeMenuQuiz.
+  ///
+  /// In vi, this message translates to:
+  /// **' Khám Phá Bản Thân'**
+  String get homeMenuQuiz;
+
+  /// No description provided for @quizTitle.
+  ///
+  /// In vi, this message translates to:
+  /// **'Khám Phá Bản Thân'**
+  String get quizTitle;
+
+  /// No description provided for @quizSelectPattern.
+  ///
+  /// In vi, this message translates to:
+  /// **'Chọn chủng vân tay cho ngón này:'**
+  String get quizSelectPattern;
+
+  /// No description provided for @quizFingerRight1.
+  ///
+  /// In vi, this message translates to:
+  /// **'Ngón cái (P)'**
+  String get quizFingerRight1;
+
+  /// No description provided for @quizFingerRight2.
+  ///
+  /// In vi, this message translates to:
+  /// **'Ngón trỏ (P)'**
+  String get quizFingerRight2;
+
+  /// No description provided for @quizFingerRight3.
+  ///
+  /// In vi, this message translates to:
+  /// **'Ngón giữa (P)'**
+  String get quizFingerRight3;
+
+  /// No description provided for @quizFingerRight4.
+  ///
+  /// In vi, this message translates to:
+  /// **'Ngón áp út (P)'**
+  String get quizFingerRight4;
+
+  /// No description provided for @quizFingerRight5.
+  ///
+  /// In vi, this message translates to:
+  /// **'Ngón út (P)'**
+  String get quizFingerRight5;
+
+  /// No description provided for @quizFingerLeft1.
+  ///
+  /// In vi, this message translates to:
+  /// **'Ngón cái (T)'**
+  String get quizFingerLeft1;
+
+  /// No description provided for @quizFingerLeft2.
+  ///
+  /// In vi, this message translates to:
+  /// **'Ngón trỏ (T)'**
+  String get quizFingerLeft2;
+
+  /// No description provided for @quizFingerLeft3.
+  ///
+  /// In vi, this message translates to:
+  /// **'Ngón giữa (T)'**
+  String get quizFingerLeft3;
+
+  /// No description provided for @quizFingerLeft4.
+  ///
+  /// In vi, this message translates to:
+  /// **'Ngón áp út (T)'**
+  String get quizFingerLeft4;
+
+  /// No description provided for @quizFingerLeft5.
+  ///
+  /// In vi, this message translates to:
+  /// **'Ngón út (T)'**
+  String get quizFingerLeft5;
+
+  /// No description provided for @quizNext.
+  ///
+  /// In vi, this message translates to:
+  /// **'Tiếp theo'**
+  String get quizNext;
+
+  /// No description provided for @quizPrev.
+  ///
+  /// In vi, this message translates to:
+  /// **'Quay lại'**
+  String get quizPrev;
+
+  /// No description provided for @quizViewResult.
+  ///
+  /// In vi, this message translates to:
+  /// **'Xem kết quả'**
+  String get quizViewResult;
+
+  /// No description provided for @quizResultTitle.
+  ///
+  /// In vi, this message translates to:
+  /// **'Kết Quả Của Bạn'**
+  String get quizResultTitle;
+
+  /// No description provided for @quizDominantType.
+  ///
+  /// In vi, this message translates to:
+  /// **'Chủng chính của bạn:'**
+  String get quizDominantType;
+
+  /// No description provided for @quizTypeWhorl.
+  ///
+  /// In vi, this message translates to:
+  /// **'Chủng Đại Bàng (Vân xoáy)'**
+  String get quizTypeWhorl;
+
+  /// No description provided for @quizTypeLoop.
+  ///
+  /// In vi, this message translates to:
+  /// **'Chủng Nước (Vân móc)'**
+  String get quizTypeLoop;
+
+  /// No description provided for @quizTypeArch.
+  ///
+  /// In vi, this message translates to:
+  /// **'Chủng Núi (Vân cung)'**
+  String get quizTypeArch;
+
+  /// No description provided for @quizExploreDetail.
+  ///
+  /// In vi, this message translates to:
+  /// **'Xem chi tiết'**
+  String get quizExploreDetail;
+
+  /// No description provided for @quizRetake.
+  ///
+  /// In vi, this message translates to:
+  /// **'Làm lại'**
+  String get quizRetake;
 }
 
 class _AppLocalizationsDelegate
