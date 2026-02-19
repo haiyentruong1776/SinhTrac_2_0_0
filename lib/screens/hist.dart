@@ -23,56 +23,54 @@ class Hist extends StatelessWidget {
       l10n.histToday,
     ];
 
-    return SafeArea(
-      child: Scaffold(
-        appBar: AppBar(
-          title: Text(
-            l10n.histTitle,
-            style: TextStyle(
-              color: AppColors.textPrimary,
-              fontWeight: FontWeight.bold,
-            ),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          l10n.histTitle,
+          style: TextStyle(
+            color: AppColors.textPrimary,
+            fontWeight: FontWeight.bold,
           ),
-          iconTheme: IconThemeData(color: AppColors.textPrimary),
-          backgroundColor: AppColors.appBarBg,
-          actions: <Widget>[
-            CommonFunctions.homeButton(context, '/intro'),
-          ],
         ),
-        body: Stack(children: <Widget>[
-          Container(decoration: BoxDecoration(color: AppColors.scaffoldBg)),
-          AdBannerTemplate(
-            child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16),
-              child: Center(
-                child: Column(children: <Widget>[
-                  Image.asset("images/history.png", width: 80),
-                  Text(
-                    l10n.histHeading,
-                    style: TextStyle(
-                      color: AppColors.textPrimary,
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
+        iconTheme: IconThemeData(color: AppColors.textPrimary),
+        backgroundColor: AppColors.appBarBg,
+        actions: <Widget>[
+          CommonFunctions.homeButton(context, '/intro'),
+        ],
+      ),
+      body: Stack(children: <Widget>[
+        Container(decoration: BoxDecoration(color: AppColors.scaffoldBg)),
+        AdBannerTemplate(
+          child: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16),
+            child: Center(
+              child: Column(children: <Widget>[
+                Image.asset("images/history.png", width: 80),
+                Text(
+                  l10n.histHeading,
+                  style: TextStyle(
+                    color: AppColors.textPrimary,
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Divider(),
+                Expanded(
+                  child: ListView.separated(
+                    padding: EdgeInsets.only(left: 5, bottom: 20),
+                    itemCount: entries.length,
+                    separatorBuilder: (_, __) => Divider(),
+                    itemBuilder: (_, index) => Text(
+                      entries[index],
+                      style: TextStyle(color: AppColors.textPrimary, fontSize: 15),
                     ),
                   ),
-                  Divider(),
-                  Expanded(
-                    child: ListView.separated(
-                      padding: EdgeInsets.only(left: 5, bottom: 20),
-                      itemCount: entries.length,
-                      separatorBuilder: (_, __) => Divider(),
-                      itemBuilder: (_, index) => Text(
-                        entries[index],
-                        style: TextStyle(color: AppColors.textPrimary, fontSize: 15),
-                      ),
-                    ),
-                  ),
-                ]),
-              ),
+                ),
+              ]),
             ),
           ),
-        ]),
-      ),
+        ),
+      ]),
     );
   }
 }

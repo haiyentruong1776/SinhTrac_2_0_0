@@ -2565,4 +2565,109 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get quizRetake => 'Retake';
+
+  @override
+  String get homeMenuCompare => ' Compare Types';
+
+  @override
+  String get compareTitle => 'Compare Types';
+
+  @override
+  String get compareSelectTwo => 'Pick 2 sub-types to compare:';
+
+  @override
+  String get comparePickType => 'Pick a type';
+
+  @override
+  String get compareVs => 'vs';
+
+  @override
+  String get compareTabChar => 'Traits';
+
+  @override
+  String get compareTabAdv => 'Strengths';
+
+  @override
+  String get compareTabDisadv => 'Weaknesses';
+
+  @override
+  String get compareTabComm => 'Communication';
+
+  @override
+  String get homeMenuCompat => ' Compatibility';
+
+  @override
+  String get compatTitle => 'Compatibility';
+
+  @override
+  String get compatYourType => 'Your type';
+
+  @override
+  String get compatTheirType => 'Their type';
+
+  @override
+  String get compatPickType => 'Pick a type';
+
+  @override
+  String get compatSectionComm => 'Communication Tips';
+
+  @override
+  String get compatSectionFriction => 'Potential Friction';
+
+  @override
+  String get compatSectionStrengths => 'Complementary Strengths';
+
+  @override
+  String get compatSelectBoth => 'Select both types to see compatibility tips';
+
+  @override
+  String get homeMenuDashboard => ' Overview';
+
+  @override
+  String get dashboardTitle => 'Fingerprint Overview';
+
+  @override
+  String get dashboardPrevalence => 'Global Prevalence';
+
+  @override
+  String get dashboardSubTypes => 'Sub-Types';
+
+  @override
+  String get dashboardWhorlGroup => 'Eagle Group (Whorl)';
+
+  @override
+  String get dashboardLoopGroup => 'Water Group (Loop)';
+
+  @override
+  String get dashboardArchGroup => 'Mountain Group (Arch)';
+
+  @override
+  String get dashboardOther => 'Other';
+
+  @override
+  String get homeMenuIdentifier => ' Visual Guide';
+
+  @override
+  String get identifierTitle => 'Fingerprint Visual Guide';
+
+  @override
+  String get identifierHint => 'Tap any pattern to learn more';
+
+  @override
+  String get identifierLoopSection => 'Loop Patterns';
+
+  @override
+  String get identifierWhorlSection => 'Whorl Patterns';
+
+  @override
+  String get identifierArchSection => 'Arch Patterns';
+
+  @override
+  String get homeMenuSectionLearn => 'LEARN';
+
+  @override
+  String get homeMenuSectionTools => 'TOOLS';
+
+  @override
+  String get homeMenuSectionMore => 'MORE';
 }

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:seabird.biometry/helpers/ad_banner_template.dart';
+import 'package:seabird.biometry/helpers/ad_helpers.dart';
 import 'package:seabird.biometry/helpers/app_colors.dart';
 import 'package:seabird.biometry/helpers/common_functions.dart';
 import 'package:seabird.biometry/l10n/app_localizations.dart';
@@ -61,28 +63,29 @@ class _QuizScreenState extends State<QuizScreen> {
 
   @override
   Widget build(BuildContext context) {
+    AdHelpers.showInterstitialAdRandom();
     final l10n = AppLocalizations.of(context)!;
     final fingers = _fingerNames(l10n);
     final isLastStep = _currentStep == 9;
     final hasSelection = _selections[_currentStep] != null;
     final allSelected = _selections.every((s) => s != null);
 
-    return SafeArea(
-      child: Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          title: Text(
-            l10n.quizTitle,
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: AppColors.textPrimary,
-            ),
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text(
+          l10n.quizTitle,
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: AppColors.textPrimary,
           ),
-          iconTheme: IconThemeData(color: AppColors.textPrimary),
-          backgroundColor: AppColors.appBarBg,
-          actions: [CommonFunctions.homeButton(context, '/quiz')],
         ),
-        body: Container(
+        iconTheme: IconThemeData(color: AppColors.textPrimary),
+        backgroundColor: AppColors.appBarBg,
+        actions: [CommonFunctions.homeButton(context, '/quiz')],
+      ),
+      body: AdBannerTemplate(
+        child: Container(
           color: AppColors.scaffoldBg,
           child: Column(
             children: [

@@ -60,73 +60,69 @@ class ParentTypeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    AdHelpers.showInterstitialAd();
+    AdHelpers.showInterstitialAdRandom();
 
     final pageController = PageController(initialPage: 0, keepPage: false);
     final deviceWidth = MediaQuery.of(context).size.width;
 
-    return SafeArea(
-      child: Scaffold(
-        appBar: AppBar(
-          title: Row(children: <Widget>[
-            Image.asset(data.iconImage, width: deviceWidth / 10),
-            FittedBox(
-              fit: BoxFit.fitWidth,
-              child: Text(
-                data.title,
-                style: TextStyle(
-                  color: AppColors.textPrimary,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            )
-          ]),
-          iconTheme: IconThemeData(color: AppColors.textPrimary),
-          backgroundColor: AppColors.appBarBg,
-          actions: <Widget>[
-            CommonFunctions.homeButton(context, data.homeRoute),
-          ],
-        ),
-        body: Stack(children: <Widget>[
-          Container(decoration: BoxDecoration(color: AppColors.scaffoldBg)),
-          AdBannerTemplate(
-            child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16),
-              child: Center(
-                child: Column(children: <Widget>[
-                  // Header: icon + ratio
-                  _buildHeader(deviceWidth),
-                  SizedBox(height: 24),
-                  // Section title
-                  Text(
-                    data.sectionAttributesTitle,
-                    style: TextStyle(
-                      color: AppColors.textPrimary,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  // PageView with 3 pages
-                  Expanded(
-                    child: Container(
-                      child: SafeArea(
-                        child: PageView(
-                          controller: pageController,
-                          children: <Widget>[
-                            _buildSubTypesPage(context, pageController, deviceWidth),
-                            _buildTraitsPage(pageController),
-                            _buildEducationPage(pageController),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ]),
+    return Scaffold(
+      appBar: AppBar(
+        title: Row(children: <Widget>[
+          Image.asset(data.iconImage, width: deviceWidth / 10),
+          FittedBox(
+            fit: BoxFit.fitWidth,
+            child: Text(
+              data.title,
+              style: TextStyle(
+                color: AppColors.textPrimary,
+                fontWeight: FontWeight.bold,
               ),
             ),
-          ),
+          )
         ]),
+        iconTheme: IconThemeData(color: AppColors.textPrimary),
+        backgroundColor: AppColors.appBarBg,
+        actions: <Widget>[
+          CommonFunctions.homeButton(context, data.homeRoute),
+        ],
       ),
+      body: Stack(children: <Widget>[
+        Container(decoration: BoxDecoration(color: AppColors.scaffoldBg)),
+        AdBannerTemplate(
+          child: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16),
+            child: Center(
+              child: Column(children: <Widget>[
+                // Header: icon + ratio
+                _buildHeader(deviceWidth),
+                SizedBox(height: 24),
+                // Section title
+                Text(
+                  data.sectionAttributesTitle,
+                  style: TextStyle(
+                    color: AppColors.textPrimary,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                // PageView with 3 pages
+                Expanded(
+                  child: Container(
+                    child: PageView(
+                      controller: pageController,
+                      children: <Widget>[
+                        _buildSubTypesPage(context, pageController, deviceWidth),
+                        _buildTraitsPage(pageController),
+                        _buildEducationPage(pageController),
+                      ],
+                    ),
+                  ),
+                ),
+              ]),
+            ),
+          ),
+        ),
+      ]),
     );
   }
 

@@ -707,5 +707,45 @@
   "quizTypeLoop": "Water Group (Loop)",
   "quizTypeArch": "Mountain Group (Arch)",
   "quizExploreDetail": "Explore Detail",
-  "quizRetake": "Retake"
+  "quizRetake": "Retake",
+
+  "homeMenuCompare": " Compare Types",
+  "compareTitle": "Compare Types",
+  "compareSelectTwo": "Pick 2 sub-types to compare:",
+  "comparePickType": "Pick a type",
+  "compareVs": "vs",
+  "compareTabChar": "Traits",
+  "compareTabAdv": "Strengths",
+  "compareTabDisadv": "Weaknesses",
+  "compareTabComm": "Communication",
+
+  "homeMenuCompat": " Compatibility",
+  "compatTitle": "Compatibility",
+  "compatYourType": "Your type",
+  "compatTheirType": "Their type",
+  "compatPickType": "Pick a type",
+  "compatSectionComm": "Communication Tips",
+  "compatSectionFriction": "Potential Friction",
+  "compatSectionStrengths": "Complementary Strengths",
+  "compatSelectBoth": "Select both types to see compatibility tips",
+
+  "homeMenuDashboard": " Overview",
+  "dashboardTitle": "Fingerprint Overview",
+  "dashboardPrevalence": "Global Prevalence",
+  "dashboardSubTypes": "Sub-Types",
+  "dashboardWhorlGroup": "Eagle Group (Whorl)",
+  "dashboardLoopGroup": "Water Group (Loop)",
+  "dashboardArchGroup": "Mountain Group (Arch)",
+  "dashboardOther": "Other",
+
+  "homeMenuIdentifier": " Visual Guide",
+  "identifierTitle": "Fingerprint Visual Guide",
+  "identifierHint": "Tap any pattern to learn more",
+  "identifierLoopSection": "Loop Patterns",
+  "identifierWhorlSection": "Whorl Patterns",
+  "identifierArchSection": "Arch Patterns",
+
+  "homeMenuSectionLearn": "LEARN",
+  "homeMenuSectionTools": "TOOLS",
+  "homeMenuSectionMore": "MORE"
 }

@@ -2597,4 +2597,109 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get quizRetake => 'Làm lại';
+
+  @override
+  String get homeMenuCompare => ' So Sánh Chủng Vân';
+
+  @override
+  String get compareTitle => 'So Sánh Chủng Vân';
+
+  @override
+  String get compareSelectTwo => 'Chọn 2 chủng vân tay để so sánh:';
+
+  @override
+  String get comparePickType => 'Chọn chủng vân';
+
+  @override
+  String get compareVs => 'vs';
+
+  @override
+  String get compareTabChar => 'Tính cách';
+
+  @override
+  String get compareTabAdv => 'Ưu điểm';
+
+  @override
+  String get compareTabDisadv => 'Nhược điểm';
+
+  @override
+  String get compareTabComm => 'Giao tiếp';
+
+  @override
+  String get homeMenuCompat => ' Tương Hợp';
+
+  @override
+  String get compatTitle => 'Tương Hợp';
+
+  @override
+  String get compatYourType => 'Chủng của bạn';
+
+  @override
+  String get compatTheirType => 'Chủng của họ';
+
+  @override
+  String get compatPickType => 'Chọn chủng vân';
+
+  @override
+  String get compatSectionComm => 'Gợi Ý Giao Tiếp';
+
+  @override
+  String get compatSectionFriction => 'Điểm Xung Đột';
+
+  @override
+  String get compatSectionStrengths => 'Điểm Bổ Sung';
+
+  @override
+  String get compatSelectBoth => 'Chọn cả hai chủng để xem gợi ý tương hợp';
+
+  @override
+  String get homeMenuDashboard => ' Tổng Quan';
+
+  @override
+  String get dashboardTitle => 'Tổng Quan Vân Tay';
+
+  @override
+  String get dashboardPrevalence => 'Tỉ Lệ Phổ Biến';
+
+  @override
+  String get dashboardSubTypes => 'Các Chủng Nhỏ';
+
+  @override
+  String get dashboardWhorlGroup => 'Chủng Đại Bàng (Vân xoáy)';
+
+  @override
+  String get dashboardLoopGroup => 'Chủng Nước (Vân móc)';
+
+  @override
+  String get dashboardArchGroup => 'Chủng Núi (Vân cung)';
+
+  @override
+  String get dashboardOther => 'Khác';
+
+  @override
+  String get homeMenuIdentifier => ' Nhận Dạng';
+
+  @override
+  String get identifierTitle => 'Nhận Dạng Vân Tay';
+
+  @override
+  String get identifierHint => 'Chạm vào hình để xem chi tiết';
+
+  @override
+  String get identifierLoopSection => 'Vân Móc (Loop)';
+
+  @override
+  String get identifierWhorlSection => 'Vân Xoáy (Whorl)';
+
+  @override
+  String get identifierArchSection => 'Vân Cung (Arch)';
+
+  @override
+  String get homeMenuSectionLearn => 'TÌM HIỂU';
+
+  @override
+  String get homeMenuSectionTools => 'CÔNG CỤ';
+
+  @override
+  String get homeMenuSectionMore => 'THÊM';
 }

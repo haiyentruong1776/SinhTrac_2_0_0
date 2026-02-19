@@ -26,6 +26,11 @@ import 'package:seabird.biometry/screens/wt.dart';
 import 'package:seabird.biometry/screens/wx.dart';
 
 import 'app_provider.dart';
+import 'screens/compare_screen.dart';
+import 'screens/compatibility_screen.dart';
+import 'screens/dashboard_screen.dart';
+import 'screens/identifier_screen.dart';
+import 'screens/quiz_screen.dart';
 import 'screens/splash_screen.dart';
 
 void main() {
@@ -87,6 +92,16 @@ void main() {
               return MaterialPageRoute(builder: (_) => Lr());
             case '/lu':
               return MaterialPageRoute(builder: (_) => Lu());
+            case '/quiz':
+              return MaterialPageRoute(builder: (_) => QuizScreen());
+            case '/compare':
+              return MaterialPageRoute(builder: (_) => CompareScreen());
+            case '/compat':
+              return MaterialPageRoute(builder: (_) => CompatibilityScreen());
+            case '/dashboard':
+              return MaterialPageRoute(builder: (_) => DashboardScreen());
+            case '/identifier':
+              return MaterialPageRoute(builder: (_) => IdentifierScreen());
             default:
               return MaterialPageRoute(builder: (_) => Home());
           }

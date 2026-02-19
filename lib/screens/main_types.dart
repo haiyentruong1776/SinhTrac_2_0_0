@@ -48,50 +48,48 @@ class MainTypesState extends State<MainTypes> with SingleTickerProviderStateMixi
           color: AppColors.lightBlueBg),
     ];
 
-    return SafeArea(
-      child: Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          title: Text(
-            l10n.mainTypesTitle,
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: AppColors.textPrimary,
-            ),
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text(
+          l10n.mainTypesTitle,
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: AppColors.textPrimary,
           ),
-          iconTheme: IconThemeData(color: AppColors.textPrimary),
-          backgroundColor: AppColors.appBarBg,
-          actions: <Widget>[
-            CommonFunctions.homeButton(context, '/intro'),
-          ],
         ),
-        body: Stack(children: <Widget>[
-          Container(
-            decoration: BoxDecoration(
-              color: AppColors.scaffoldBg,
-            ),
+        iconTheme: IconThemeData(color: AppColors.textPrimary),
+        backgroundColor: AppColors.appBarBg,
+        actions: <Widget>[
+          CommonFunctions.homeButton(context, '/intro'),
+        ],
+      ),
+      body: Stack(children: <Widget>[
+        Container(
+          decoration: BoxDecoration(
+            color: AppColors.scaffoldBg,
           ),
-          AdBannerTemplate(
-            child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16),
-              alignment: Alignment.center,
-              child: Column(
-                children: <Widget>[
-                  SizedBox(height: 24),
-                  Expanded(
-                    child: Container(
-                      margin: EdgeInsets.only(top: 24),
-                      child: ListView(
-                        children: types.map((type) => _buildTypeCard(context, type)).toList(),
-                      ),
+        ),
+        AdBannerTemplate(
+          child: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16),
+            alignment: Alignment.center,
+            child: Column(
+              children: <Widget>[
+                SizedBox(height: 24),
+                Expanded(
+                  child: Container(
+                    margin: EdgeInsets.only(top: 24),
+                    child: ListView(
+                      children: types.map((type) => _buildTypeCard(context, type)).toList(),
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
-        ]),
-      ),
+        ),
+      ]),
     );
   }
 

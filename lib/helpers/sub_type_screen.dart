@@ -53,39 +53,37 @@ class SubTypeScreen extends StatelessWidget {
     PageController textController = PageController(initialPage: 0, keepPage: false);
     num deviceWidth = MediaQuery.of(context).size.width;
 
-    return SafeArea(
-      child: Scaffold(
-        appBar: _buildAppBar(context, deviceWidth),
-        body: Stack(children: <Widget>[
-          Container(
-            decoration: BoxDecoration(color: AppColors.scaffoldBg),
-          ),
-          AdBannerTemplate(
-            child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16),
-              child: Center(
-                child: Column(children: <Widget>[
-                  Text(data.title,
-                      style: TextStyle(
-                          color: AppColors.textPrimary, fontSize: 20, fontWeight: FontWeight.bold)),
-                  SizedBox(height: 16),
-                  _buildHeaderImages(deviceWidth),
-                  Divider(),
-                  _buildSectionTitle(context),
-                  Flexible(
-                    child: Container(
-                      child: PageView(
-                        controller: textController,
-                        children: _buildPages(textController),
-                      ),
+    return Scaffold(
+      appBar: _buildAppBar(context, deviceWidth),
+      body: Stack(children: <Widget>[
+        Container(
+          decoration: BoxDecoration(color: AppColors.scaffoldBg),
+        ),
+        AdBannerTemplate(
+          child: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16),
+            child: Center(
+              child: Column(children: <Widget>[
+                Text(data.title,
+                    style: TextStyle(
+                        color: AppColors.textPrimary, fontSize: 20, fontWeight: FontWeight.bold)),
+                SizedBox(height: 16),
+                _buildHeaderImages(deviceWidth),
+                Divider(),
+                _buildSectionTitle(context),
+                Flexible(
+                  child: Container(
+                    child: PageView(
+                      controller: textController,
+                      children: _buildPages(textController),
                     ),
                   ),
-                ]),
-              ),
+                ),
+              ]),
             ),
           ),
-        ]),
-      ),
+        ),
+      ]),
     );
   }
 

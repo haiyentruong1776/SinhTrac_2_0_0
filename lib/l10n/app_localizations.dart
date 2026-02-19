@@ -4339,6 +4339,216 @@ abstract class AppLocalizations {
   /// In vi, this message translates to:
   /// **'Làm lại'**
   String get quizRetake;
+
+  /// No description provided for @homeMenuCompare.
+  ///
+  /// In vi, this message translates to:
+  /// **' So Sánh Chủng Vân'**
+  String get homeMenuCompare;
+
+  /// No description provided for @compareTitle.
+  ///
+  /// In vi, this message translates to:
+  /// **'So Sánh Chủng Vân'**
+  String get compareTitle;
+
+  /// No description provided for @compareSelectTwo.
+  ///
+  /// In vi, this message translates to:
+  /// **'Chọn 2 chủng vân tay để so sánh:'**
+  String get compareSelectTwo;
+
+  /// No description provided for @comparePickType.
+  ///
+  /// In vi, this message translates to:
+  /// **'Chọn chủng vân'**
+  String get comparePickType;
+
+  /// No description provided for @compareVs.
+  ///
+  /// In vi, this message translates to:
+  /// **'vs'**
+  String get compareVs;
+
+  /// No description provided for @compareTabChar.
+  ///
+  /// In vi, this message translates to:
+  /// **'Tính cách'**
+  String get compareTabChar;
+
+  /// No description provided for @compareTabAdv.
+  ///
+  /// In vi, this message translates to:
+  /// **'Ưu điểm'**
+  String get compareTabAdv;
+
+  /// No description provided for @compareTabDisadv.
+  ///
+  /// In vi, this message translates to:
+  /// **'Nhược điểm'**
+  String get compareTabDisadv;
+
+  /// No description provided for @compareTabComm.
+  ///
+  /// In vi, this message translates to:
+  /// **'Giao tiếp'**
+  String get compareTabComm;
+
+  /// No description provided for @homeMenuCompat.
+  ///
+  /// In vi, this message translates to:
+  /// **' Tương Hợp'**
+  String get homeMenuCompat;
+
+  /// No description provided for @compatTitle.
+  ///
+  /// In vi, this message translates to:
+  /// **'Tương Hợp'**
+  String get compatTitle;
+
+  /// No description provided for @compatYourType.
+  ///
+  /// In vi, this message translates to:
+  /// **'Chủng của bạn'**
+  String get compatYourType;
+
+  /// No description provided for @compatTheirType.
+  ///
+  /// In vi, this message translates to:
+  /// **'Chủng của họ'**
+  String get compatTheirType;
+
+  /// No description provided for @compatPickType.
+  ///
+  /// In vi, this message translates to:
+  /// **'Chọn chủng vân'**
+  String get compatPickType;
+
+  /// No description provided for @compatSectionComm.
+  ///
+  /// In vi, this message translates to:
+  /// **'Gợi Ý Giao Tiếp'**
+  String get compatSectionComm;
+
+  /// No description provided for @compatSectionFriction.
+  ///
+  /// In vi, this message translates to:
+  /// **'Điểm Xung Đột'**
+  String get compatSectionFriction;
+
+  /// No description provided for @compatSectionStrengths.
+  ///
+  /// In vi, this message translates to:
+  /// **'Điểm Bổ Sung'**
+  String get compatSectionStrengths;
+
+  /// No description provided for @compatSelectBoth.
+  ///
+  /// In vi, this message translates to:
+  /// **'Chọn cả hai chủng để xem gợi ý tương hợp'**
+  String get compatSelectBoth;
+
+  /// No description provided for @homeMenuDashboard.
+  ///
+  /// In vi, this message translates to:
+  /// **' Tổng Quan'**
+  String get homeMenuDashboard;
+
+  /// No description provided for @dashboardTitle.
+  ///
+  /// In vi, this message translates to:
+  /// **'Tổng Quan Vân Tay'**
+  String get dashboardTitle;
+
+  /// No description provided for @dashboardPrevalence.
+  ///
+  /// In vi, this message translates to:
+  /// **'Tỉ Lệ Phổ Biến'**
+  String get dashboardPrevalence;
+
+  /// No description provided for @dashboardSubTypes.
+  ///
+  /// In vi, this message translates to:
+  /// **'Các Chủng Nhỏ'**
+  String get dashboardSubTypes;
+
+  /// No description provided for @dashboardWhorlGroup.
+  ///
+  /// In vi, this message translates to:
+  /// **'Chủng Đại Bàng (Vân xoáy)'**
+  String get dashboardWhorlGroup;
+
+  /// No description provided for @dashboardLoopGroup.
+  ///
+  /// In vi, this message translates to:
+  /// **'Chủng Nước (Vân móc)'**
+  String get dashboardLoopGroup;
+
+  /// No description provided for @dashboardArchGroup.
+  ///
+  /// In vi, this message translates to:
+  /// **'Chủng Núi (Vân cung)'**
+  String get dashboardArchGroup;
+
+  /// No description provided for @dashboardOther.
+  ///
+  /// In vi, this message translates to:
+  /// **'Khác'**
+  String get dashboardOther;
+
+  /// No description provided for @homeMenuIdentifier.
+  ///
+  /// In vi, this message translates to:
+  /// **' Nhận Dạng'**
+  String get homeMenuIdentifier;
+
+  /// No description provided for @identifierTitle.
+  ///
+  /// In vi, this message translates to:
+  /// **'Nhận Dạng Vân Tay'**
+  String get identifierTitle;
+
+  /// No description provided for @identifierHint.
+  ///
+  /// In vi, this message translates to:
+  /// **'Chạm vào hình để xem chi tiết'**
+  String get identifierHint;
+
+  /// No description provided for @identifierLoopSection.
+  ///
+  /// In vi, this message translates to:
+  /// **'Vân Móc (Loop)'**
+  String get identifierLoopSection;
+
+  /// No description provided for @identifierWhorlSection.
+  ///
+  /// In vi, this message translates to:
+  /// **'Vân Xoáy (Whorl)'**
+  String get identifierWhorlSection;
+
+  /// No description provided for @identifierArchSection.
+  ///
+  /// In vi, this message translates to:
+  /// **'Vân Cung (Arch)'**
+  String get identifierArchSection;
+
+  /// No description provided for @homeMenuSectionLearn.
+  ///
+  /// In vi, this message translates to:
+  /// **'TÌM HIỂU'**
+  String get homeMenuSectionLearn;
+
+  /// No description provided for @homeMenuSectionTools.
+  ///
+  /// In vi, this message translates to:
+  /// **'CÔNG CỤ'**
+  String get homeMenuSectionTools;
+
+  /// No description provided for @homeMenuSectionMore.
+  ///
+  /// In vi, this message translates to:
+  /// **'THÊM'**
+  String get homeMenuSectionMore;
 }
 
 class _AppLocalizationsDelegate

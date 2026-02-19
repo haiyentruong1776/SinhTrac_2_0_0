@@ -707,5 +707,45 @@
   "quizTypeLoop": "Chủng Nước (Vân móc)",
   "quizTypeArch": "Chủng Núi (Vân cung)",
   "quizExploreDetail": "Xem chi tiết",
-  "quizRetake": "Làm lại"
+  "quizRetake": "Làm lại",
+
+  "homeMenuCompare": " So Sánh Chủng Vân",
+  "compareTitle": "So Sánh Chủng Vân",
+  "compareSelectTwo": "Chọn 2 chủng vân tay để so sánh:",
+  "comparePickType": "Chọn chủng vân",
+  "compareVs": "vs",
+  "compareTabChar": "Tính cách",
+  "compareTabAdv": "Ưu điểm",
+  "compareTabDisadv": "Nhược điểm",
+  "compareTabComm": "Giao tiếp",
+
+  "homeMenuCompat": " Tương Hợp",
+  "compatTitle": "Tương Hợp",
+  "compatYourType": "Chủng của bạn",
+  "compatTheirType": "Chủng của họ",
+  "compatPickType": "Chọn chủng vân",
+  "compatSectionComm": "Gợi Ý Giao Tiếp",
+  "compatSectionFriction": "Điểm Xung Đột",
+  "compatSectionStrengths": "Điểm Bổ Sung",
+  "compatSelectBoth": "Chọn cả hai chủng để xem gợi ý tương hợp",
+
+  "homeMenuDashboard": " Tổng Quan",
+  "dashboardTitle": "Tổng Quan Vân Tay",
+  "dashboardPrevalence": "Tỉ Lệ Phổ Biến",
+  "dashboardSubTypes": "Các Chủng Nhỏ",
+  "dashboardWhorlGroup": "Chủng Đại Bàng (Vân xoáy)",
+  "dashboardLoopGroup": "Chủng Nước (Vân móc)",
+  "dashboardArchGroup": "Chủng Núi (Vân cung)",
+  "dashboardOther": "Khác",
+
+  "homeMenuIdentifier": " Nhận Dạng",
+  "identifierTitle": "Nhận Dạng Vân Tay",
+  "identifierHint": "Chạm vào hình để xem chi tiết",
+  "identifierLoopSection": "Vân Móc (Loop)",
+  "identifierWhorlSection": "Vân Xoáy (Whorl)",
+  "identifierArchSection": "Vân Cung (Arch)",
+
+  "homeMenuSectionLearn": "TÌM HIỂU",
+  "homeMenuSectionTools": "CÔNG CỤ",
+  "homeMenuSectionMore": "THÊM"
 }

@@ -17,8 +17,8 @@ class AppColors {
   static const Color appBarBg = Color(0xFFFAFAFA); // soft white
 
   // ─── Backgrounds ──────────────────────────────────────────────────
-  static const Color scaffoldBg = Colors.white;
-  static const Color cardBg = Color(0xFFF5F5F5); // light grey card
+  static const Color scaffoldBg = Color(0xFFF5F5F5);
+  static const Color cardBg = Colors.white; // light grey card
   static const Color menuBoxBg = Colors.white; // menu items on Home
 
   // ─── Accent (SplashScreen shimmer only) ───────────────────────────

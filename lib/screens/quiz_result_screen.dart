@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:seabird.biometry/helpers/ad_banner_template.dart';
+import 'package:seabird.biometry/helpers/ad_helpers.dart';
 import 'package:seabird.biometry/helpers/app_colors.dart';
 import 'package:seabird.biometry/helpers/common_functions.dart';
 import 'package:seabird.biometry/l10n/app_localizations.dart';
@@ -12,6 +14,7 @@ class QuizResultScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    AdHelpers.showInterstitialAdRandom();
     final l10n = AppLocalizations.of(context)!;
 
     // Count occurrences
@@ -77,19 +80,19 @@ class QuizResultScreen extends StatelessWidget {
         ];
     }
 
-    return SafeArea(
-      child: Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          title: Text(
-            l10n.quizResultTitle,
-            style: TextStyle(fontWeight: FontWeight.bold, color: AppColors.textPrimary),
-          ),
-          iconTheme: IconThemeData(color: AppColors.textPrimary),
-          backgroundColor: AppColors.appBarBg,
-          actions: [CommonFunctions.homeButton(context, '/quiz')],
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text(
+          l10n.quizResultTitle,
+          style: TextStyle(fontWeight: FontWeight.bold, color: AppColors.textPrimary),
         ),
-        body: Container(
+        iconTheme: IconThemeData(color: AppColors.textPrimary),
+        backgroundColor: AppColors.appBarBg,
+        actions: [CommonFunctions.homeButton(context, '/quiz')],
+      ),
+      body: AdBannerTemplate(
+        child: Container(
           color: AppColors.scaffoldBg,
           child: ListView(
             padding: EdgeInsets.all(20),
