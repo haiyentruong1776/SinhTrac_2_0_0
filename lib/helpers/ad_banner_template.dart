@@ -31,7 +31,7 @@ class _AdBannerTemplateState extends State<AdBannerTemplate> {
       return Stack(
         children: [
           Container(
-            margin: EdgeInsets.only(top: 0.0),
+            margin: EdgeInsets.only(top: _bannerAd?.size.height.toDouble() ?? 0.0),
             child: widget.child,
           ),
           if (_isLoaded)
