@@ -41,7 +41,7 @@ android {
         applicationId "com.seabird.biometry"
         minSdkVersion flutter.minSdkVersion
         targetSdkVersion 36
-        versionCode 44
+        versionCode 45
         versionName "2.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
